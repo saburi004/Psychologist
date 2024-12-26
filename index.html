@@ -65,6 +65,37 @@
     opacity: 1;
   }
 }
+.arrow-circle {
+  position: absolute;
+  bottom: 20px; /* Adjust as needed for placement */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: float 2s infinite ease-in-out;
+}
+
+.arrow-circle i {
+  font-size: 24px;
+  color: #333;
+}
+
+/* Animation for floating effect */
+@keyframes float {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-20px); /* Adjust the distance */
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+}
 
 /* Slide-in from the right */
 @keyframes slideInRight {
@@ -129,19 +160,33 @@
 
 
  <!-- Hero Section -->
-<section class="relative w-full h-96 bg-cover bg-center parallax " >
+<!-- <section class="relative w-full h-96 bg-cover bg-center parallax " >
   <div class="absolute inset-0 bg-[#021a14] opacity-30 "></div>
   <div class="relative z-10 flex items-center justify-center w-full h-full text-center">
     <div>
       <h1 class="text-5xl font-semibold text-white mb-4">Welcome to Psychologist Singh
       </h1>
-      <a href="#appointment" class="bg-brown text-white px-8 py-3 rounded-full text-lg hover:bg-gray-700">Make an Appointment</a>
+      <a href="#contact" class="bg-brown text-white px-8 py-3 rounded-full text-lg hover:bg-gray-700">Make an Appointment</a>
     </div>
+  </div>
+</section> -->
+<section class="relative w-full h-96 bg-cover bg-center parallax">
+  <div class="absolute inset-0 bg-[#021a14] opacity-30"></div>
+  <div class="relative z-10 flex items-center justify-center w-full h-full text-center">
+    <div>
+      <h1 class="text-5xl font-semibold text-white mb-4">Welcome to Psychologist Singh</h1>
+      <a href="#contact" class="bg-brown text-white px-8 py-3 rounded-full text-lg hover:bg-gray-700">Make an Appointment</a>
+    </div>
+  </div>
+  <!-- Arrow Circle -->
+  <a href="#hero"><div class="arrow-circle ">
+    <i class="fas fa-arrow-down"></i></a>
   </div>
 </section>
 
+
 <!-- Below Hero Section -->
-<div class="section1 py-5" style="background-color: #dbfbff; position: relative;">
+<div class="section1 py-5" style="background-color: #dbfbff; position: relative;" >
     <div class="container" style="background-image: url(https://media.istockphoto.com/id/1367756031/vector/light-blue-watercolor-background-illustration.jpg?s=612x612&w=0&k=20&c=qiJl7j-2terwHd-1YJxiFIo1VJx6l6IsmoqlgeypQ7c=); 
                                  border-radius: 20px 200px 30px 30px !important; padding: 50px; margin-top: 60px; position: relative;">
       
@@ -174,7 +219,7 @@
   </div>
   
 <!-- about doctor -->
-  <section id="doctor" class="py-16 bg-white relative overflow-hidden parallax">
+  <section id="hero" class="py-16 bg-white relative overflow-hidden parallax">
     <!-- Parallax Background -->
     <div class="parallax absolute top-0 left-0 w-full h-full bg-cover bg-center" style="background-image: url('path/to/your/background-image.jpg');"></div>
     
@@ -500,40 +545,45 @@
   </section>
   
 
-  <!-- Appointment Section -->
-<section id="contact" class="py-16 bg-white relative overflow-hidden">
+<!-- Appointment Section -->
+<section id="contact" class="py-16 bg-[#ECFDFF] relative overflow-hidden ">
   <div class="container mx-auto text-center relative">
     <div class="row">
       <!-- Left Image Section -->
       <div class="col-md-6 p-0">
-        <img src="/Appointmentimg.jpeg" alt="Appointment Image" class="w-full h-65 object-cover" style="border-radius: 20px 0 0 20px;">
+        <img src="https://img.freepik.com/free-photo/paper-airplanes-pointing-brain-with-copy-space_23-2148519438.jpg" alt="Appointment Image" class="w-full object-cover" style="height:full; border-radius: 20px 0 0 20px;">
       </div>
 
       <!-- Right Content Section (Form) -->
-      <div class="col-md-6 bg-white p-8 rounded-lg">
-        <h2 class="text-4xl font-bold mb-12 text-center">Book an Appointment</h2>
+      <div class="col-md-6 p-8 rounded-lg" style="background-color: 
+      #002619
+      ;">
+        <h2 class="text-4xl font-bold mb-12 text-center text-white mt-5 font-times-new-roman font-size-80">Book an Appointment</h2>
         <form>
-          <div class="form-group mb-4">
-            <label for="name" class="text-lg">Your Name</label>
-            <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+          <div class="form-group mb-4 flex items-center">
+            <!-- <label for="name" class="text-lg mr-4 text-white">Your Name</label> -->
+            <input type="text" id="name" class="form-control w-full" placeholder="Enter your name" required>
           </div>
-          <div class="form-group mb-4">
-            <label for="email" class="text-lg">Your Email</label>
-            <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+          <div class="form-group mb-4 flex items-center">
+            <!-- <label for="email" class="text-lg mr-4 text-white">Your Email</label> -->
+            <input type="email" id="email" class="form-control w-full" placeholder="Enter your email" required>
           </div>
-          <button class="px-6 py-2 text-white font-bold rounded-full" style="background-color: #351700; border: 2px solid #f5f5dc; width: 300px;">
-            Contact
-          </button>
-                  </form>
+          <div class="text-center">
+            <button class="px-6 py-2 text-white font-bold rounded-full" style="background-color: #008575; border: 2px solid #f5f5dc; width: 300px;">
+              Contact
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
 </section>
 
 
+
   <!-- Footer -->
 <!-- Remove the container if you want to extend the Footer to full width. -->
-<div class="container my-5">
+<div class="container my-5  bg-[#ECFDFF]">
 
   <footer style="background-color: #d4fff2;">
   <div class="container p-4">
@@ -582,9 +632,7 @@
     </div>
   </div>
   <div class="text-center p-3" style="background-color: rgba(0, 47, 29, 0.952);color: #bbffef;">
-    © 2025 Copyright:
-    <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-  </div>
+    © 2025 Copyright  </div>
   <!-- Copyright -->
 </footer>
 
