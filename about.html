@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.3/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+      /* Parallax effect */
+      .parallax {
+        background-image: url('https://images.template.net/97313/free-dark-green-background-g80px.jpg');
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 400px;
+      }
+
+      body {
+        font-family: 'Times New Roman', Times, serif;
+      }
+
+      .custom-clip {
+        clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+      }
+
+      .hover-img:hover {
+        transform: scale(1.1);
+        transition: transform 0.4s ease-in-out;
+      }
+
+      .fade-in {
+        animation: fadeIn 1.5s ease-in-out;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .arrow-btn {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background-color: #004d00; /* Dark green */
+        color: white;
+        padding: 10px 20px;
+        border-radius: 50%;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .arrow-btn:hover {
+        transform: scale(1.1);
+      }
+
+      .banner {
+        background-size: cover;
+        background-position: center;
+        border-radius: 30px 280px 60px 30px;
+        height: 300px;
+        position: relative;
+        background-attachment: fixed; /* This is the key for parallax */
+      }
+
+      .description-box {
+        background-color: #A4DCD1;
+        border-radius: 20px;
+        padding: 2rem;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      }
+  </style>
+</head>
+<body class="text-gray-800">
+
+  <!-- Banner Section -->
+  <section class="banner relative parallax">
+    <!-- Back Arrow -->
+    <a href="/home.html" class="arrow-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+    </a>
+    <div class="absolute inset-0 flex items-center justify-center">
+      <h1 class="text-white text-5xl font-bold">About Us</h1>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-16">
+    <div class="container mx-auto flex flex-col lg:flex-row items-center fade-in">
+      <!-- Image -->
+      <div class="w-full lg:w-1/2 mb-8 lg:mb-0 lg:pr-12">
+        <div class="bg-white p-4 rounded-lg shadow-lg hover-img">
+          <img src="/mam2.jpg" alt="About Us Image" class="rounded-lg w-full">
+        </div>
+      </div>
+      <!-- Content -->
+      <div class="w-full lg:w-1/2 text-left description-box">
+        <h2 class="text-3xl font-bold mb-4">Priyanshu Singh</h2>
+        <p class="text-lg mb-6">
+          Priyanshu Singh is a psychologist with over 14 years of experience dedicated to empowering individuals on their journey to growth, healing, and self-discovery. She offers personalized support in key areas such as Personal Growth (helping individuals embrace change and meet their better selves), Relationship Counseling (promoting daily efforts for lasting relationships), Parent-Child Dynamics (guiding families to cultivate positive bonds), Mental Health Therapy (aiding in healing and overcoming challenges), and Career Strategy (creating structured plans for career goals). Her tailored guidance helps individuals navigate life's challenges and achieve their aspirations.
+          Recently, Priyanshu expanded her passion for connecting with others by becoming an author. Her book serves as a platform to inspire and support those seeking a more fulfilling and happier life. Above all, her mission is to provide the guidance, tools, and encouragement needed for individuals to become the best versions of themselves.
+        </p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
