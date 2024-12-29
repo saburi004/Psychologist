@@ -10,7 +10,7 @@
   <style>
       /* Parallax effect */
       .parallax {
-        background-image: url('https://images.template.net/97313/free-dark-green-background-g80px.jpg');
+        background-image: url('images/parallax.jpg');
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
@@ -82,12 +82,12 @@
 
   <!-- Banner Section -->
   <section class="banner relative parallax">
-    <!-- Back Arrow -->
-    <a href="/home.html" class="arrow-btn">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-      </svg>
-    </a>
+      <button class="absolute top-4 left-4 bg-white rounded-full shadow-lg p-2 z-20" onclick="window.location.href='/'">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 text-black">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+    </button>
+    
     <div class="absolute inset-0 flex items-center justify-center">
       <h1 class="text-white text-5xl font-bold">About Us</h1>
     </div>
@@ -99,7 +99,7 @@
       <!-- Image -->
       <div class="w-full lg:w-1/2 mb-8 lg:mb-0 lg:pr-12">
         <div class="bg-white p-4 rounded-lg shadow-lg hover-img">
-          <img src="/mam2.jpg" alt="About Us Image" class="rounded-lg w-full">
+          <img src="images/mam2.jpg" alt="About Us Image" class="rounded-lg w-full">
         </div>
       </div>
       <!-- Content -->

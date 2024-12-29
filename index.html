@@ -47,7 +47,7 @@
     .hover-card:hover { transform: scale(1.05); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); }
     
     .parallax {
-      background-image: url('https://images.template.net/97313/free-dark-green-background-g80px.jpg');
+      background-image: url('/images/parallax.jpg');
       background-attachment: fixed;
       background-position: center;
       background-repeat: no-repeat;
@@ -181,7 +181,7 @@
 
 <!-- Below Hero Section -->
 <div class="section1 py-5" style="background-color: #dbfbff; position: relative;" >
-    <div class="container" style="background-image: url(https://media.istockphoto.com/id/1367756031/vector/light-blue-watercolor-background-illustration.jpg?s=612x612&w=0&k=20&c=qiJl7j-2terwHd-1YJxiFIo1VJx6l6IsmoqlgeypQ7c=); 
+    <div class="container" style="background-image: url(images/Herobackground.jpg); 
                                  border-radius: 20px 200px 30px 30px !important; padding: 50px; margin-top: 60px; position: relative;">
       
       <!-- Glass Effect Overlay -->
@@ -192,7 +192,7 @@
       <div class="row align-items-stretch">
         <!-- Left Image Section with Slide Left Animation -->
         <div class="col-md-6 d-flex justify-content-center ">
-          <img src="/img.jpeg" 
+          <img src="images/Heroimg1.jpeg" 
                alt="Ayurveda Image" class="img-fluid rounded slide-left h-100"
                style="border-radius: 20px 200px 30px 30px !important; object-fit: cover; max-width: 100%;" />
         </div>
@@ -203,7 +203,7 @@
           <a href="#contact" class="btn btn-success rounded-pill mt-3" style="background-color: rgb(24, 61, 24);">Make Appointment</a>
           <!-- Small Image with Slide Right Animation -->
           <div class="mt-4" >
-            <img src="/img2.jpeg" 
+            <img src="images/Heroimg2.jpeg" 
                  alt="Additional Image" class="img-fluid rounded slide-right"
                  style="border-radius: 20px 100px 30px 30px !important; object-fit: cover;width: 800px; ; height: 400px;" />
           </div>
@@ -221,7 +221,7 @@
       <div class="max-w-5xl mx-auto p-8 bg-[#ccfff2] rounded-lg shadow-lg flex flex-wrap items-center">
         <!-- Left Image Section -->
         <div class="flex-shrink-0 w-full md:w-1/2 mb-8 md:mb-0">
-          <img src="\mam1.jpg" alt="Doctor Image" class="rounded-lg w-full h-80 object-cover">
+          <img src="images\mam1.jpg" alt="Doctor Image" class="rounded-lg w-full h-80 object-cover">
         </div>
   
         <!-- Right Description Section -->
@@ -302,7 +302,7 @@
 
     <div class="workright lg:w-1/2 relative">
       <!-- <img src="https://i.pinimg.com/originals/d6/4c/44/d64c44f52d4584aa58c5f1dfb6b5dfd1.gif" alt="Description of Image" class="w-full h-full object-cover rounded-[20px_200px_20px_20px] ml-10 fade-in" id="fade-in-image" style="height: 100%; width: 100%; border-radius: 20px 200px 20px 20px;"> -->
-      <img src="https://media.istockphoto.com/id/1439491487/vector/business-partnership-merger-and-connection-of-teams-tiny-people-connect-arrow-puzzle.jpg?s=612x612&w=0&k=20&c=E0Id-GIoxF-Tof_0sqJSx18XSewJoGrCMG8ftBQnTX8=" alt="Description of Image" class="w-full h-full object-cover rounded-[20px_200px_20px_20px] ml-10 fade-in" id="fade-in-image" style="height: 100%; width: 90%; border-radius: 20px 200px 20px 20px;">
+      <img src="images/services.jpg" alt="Description of Image" class="w-full h-full object-cover rounded-[20px_200px_20px_20px] ml-10 fade-in" id="fade-in-image" style="height: 100%; width: 90%; border-radius: 20px 200px 20px 20px;">
 
     </div>
   </div>
@@ -331,7 +331,7 @@
     .fade-in-visible {
         opacity: 1;
         transform: translateX(0);
-    }
+    } 
 </style>
 
   <!-- Parallax Section -->
@@ -351,7 +351,7 @@
       <div class="row">
           <div class="col-lg-6 col-md-12 d-flex justify-content-center align-items-center mb-4 mb-md-0">
               <div class="testleft overflow-hidden position-relative">
-                  <img src="https://i.pinimg.com/originals/75/63/d7/7563d7e49b77074c38d7c814192970fd.gif" alt="Description of Image" class="img-fluid rounded" style="transform: translateX(-100%); transition: transform 0.8s ease-out; object-fit: cover;height: 700px; width: 600px; border-radius: 20px 200px 20px 20px !important; ">
+                  <img src="images/testimonial.gif" alt="Description of Image" class="img-fluid rounded" style="transform: translateX(-100%); transition: transform 0.8s ease-out; object-fit: cover;height: 700px; width: 600px; border-radius: 20px 200px 20px 20px !important; ">
               </div>
           </div>
 
@@ -462,7 +462,6 @@
       const section = document.querySelector('.section6');
       const rect = section.getBoundingClientRect();
 
-      // Check if section is in the viewport
       if (rect.top < window.innerHeight && rect.bottom >= 0) {
           testleftImg.style.transform = 'translateX(0)';
       } else {
@@ -549,7 +548,7 @@
     <div class="row">
       <!-- Left Image Section -->
       <div class="col-md-6 p-0">
-        <img src="https://img.freepik.com/free-photo/paper-airplanes-pointing-brain-with-copy-space_23-2148519438.jpg" alt="Appointment Image" class="w-full object-cover" style="height:full; border-radius: 20px 0 0 20px;">
+        <img src="images/contact.png" alt="Appointment Image" class="w-full object-cover" style="height:full; border-radius: 20px 0 0 20px;">
       </div>
 
       <!-- Right Content Section (Form) -->
@@ -559,11 +558,9 @@
         <h2 class="text-4xl font-bold mb-12 text-center text-white mt-5 font-times-new-roman font-size-80">Book an Appointment</h2>
         <form>
           <div class="form-group mb-4 flex items-center">
-            <!-- <label for="name" class="text-lg mr-4 text-white">Your Name</label> -->
             <input type="text" id="name" class="form-control w-full" placeholder="Enter your name" required>
           </div>
           <div class="form-group mb-4 flex items-center">
-            <!-- <label for="email" class="text-lg mr-4 text-white">Your Email</label> -->
             <input type="email" id="email" class="form-control w-full" placeholder="Enter your email" required>
           </div>
           <div class="text-center">
