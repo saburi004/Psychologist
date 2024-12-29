@@ -78,7 +78,10 @@
   justify-content: center;
   animation: float 2s infinite ease-in-out;
 }
+.float{
+  animation: float 2s infinite ease-in-out;
 
+}
 .arrow-circle i {
   font-size: 24px;
   color: #333;
@@ -160,16 +163,7 @@
 
 
  <!-- Hero Section -->
-<!-- <section class="relative w-full h-96 bg-cover bg-center parallax " >
-  <div class="absolute inset-0 bg-[#021a14] opacity-30 "></div>
-  <div class="relative z-10 flex items-center justify-center w-full h-full text-center">
-    <div>
-      <h1 class="text-5xl font-semibold text-white mb-4">Welcome to Psychologist Singh
-      </h1>
-      <a href="#contact" class="bg-brown text-white px-8 py-3 rounded-full text-lg hover:bg-gray-700">Make an Appointment</a>
-    </div>
-  </div>
-</section> -->
+
 <section class="relative w-full h-96 bg-cover bg-center parallax">
   <div class="absolute inset-0 bg-[#021a14] opacity-30"></div>
   <div class="relative z-10 flex items-center justify-center w-full h-full text-center">
@@ -179,9 +173,9 @@
     </div>
   </div>
   <!-- Arrow Circle -->
-  <a href="#hero"><div class="arrow-circle ">
-    <i class="fas fa-arrow-down"></i></a>
-  </div>
+  <a href="#hero"><div class="arrow-circle " style="z-index: 20;">
+    <i class="fas fa-arrow-down"></i>
+  </div></a>
 </section>
 
 
@@ -203,12 +197,12 @@
                style="border-radius: 20px 200px 30px 30px !important; object-fit: cover; max-width: 100%;" />
         </div>
         <!-- Right Content Section -->
-        <div class="col-md-6 text-brown d-flex flex-column justify-content-center">
+        <div class="col-md-6 text-brown d-flex flex-column justify-content-center" id="hero">
           <h2 class="display-4" style="font-family: 'Times New Roman', Times, serif;">Transform Your Mind, Transform Your Life!</h2>
           <p class="lead pt-4">Your potential is limitless, waiting to be released. I’m here to help you break through barriers, discover your true self, and create a life filled with purpose and growth.</p>
-          <a href="book_appointment.php" class="btn btn-success rounded-pill mt-3" style="background-color: rgb(24, 61, 24);">Make Appointment</a>
+          <a href="#contact" class="btn btn-success rounded-pill mt-3" style="background-color: rgb(24, 61, 24);">Make Appointment</a>
           <!-- Small Image with Slide Right Animation -->
-          <div class="mt-4">
+          <div class="mt-4" >
             <img src="/img2.jpeg" 
                  alt="Additional Image" class="img-fluid rounded slide-right"
                  style="border-radius: 20px 100px 30px 30px !important; object-fit: cover;width: 800px; ; height: 400px;" />
@@ -219,7 +213,7 @@
   </div>
   
 <!-- about doctor -->
-  <section id="hero" class="py-16 bg-white relative overflow-hidden parallax">
+  <section  class="py-16 bg-white relative overflow-hidden parallax">
     <!-- Parallax Background -->
     <div class="parallax absolute top-0 left-0 w-full h-full bg-cover bg-center" style="background-image: url('path/to/your/background-image.jpg');"></div>
     
@@ -254,8 +248,8 @@
 <div class="section4 bg-[#F5F1E3] w-full py-20" style="background-color: #ecfdff;">
   <div class="container mx-auto flex flex-col lg:flex-row items-center">
     <div class="workleft lg:w-1/2 lg:pl-24">
-      <h3 class="font-serif text-lg font-medium">MENTAL HEALTH THERAPY (DEPRESSION, ANXIETY & STRESS)</h3>
-      <h4 class="font-serif text-5xl pb-8 mt-5">Simple and Effective Healing Process</h4>
+     <a href="/services.html"> <button class="font-serif text-3xl font-medium ">Explore More&nbsp;&nbsp;<i class="fas fa-arrow-right"></i></button></a>
+      <h4 class="font-serif text-5xl pb-8 mt-5">Have a look on how we can help you</h4>
 
       <div class="hiwcon1 flex pb-5">
         <div class="hcl">
@@ -263,7 +257,8 @@
         </div>
         <div class="hcr pt-2">
           <h4 class="font-sans text-2xl">CHILD/PARENT COUNSELLING</h4>
-          <p>During the initial consultation, our expert Ayurvedic practitioners assess your overall health and lifestyle. This helps us understand your unique constitution (Prakriti) and any imbalances (Vikriti) that need to be addressed.</p>
+          <p>Child/parent counselling focuses on improving family dynamics, addressing behavioral issues, and enhancing communication between parents and children.
+          </p>
           <hr>
         </div>
       </div>
@@ -274,7 +269,8 @@
         </div>
         <div class="hcr pt-2">
           <h4 class="font-sans text-2xl">CAREER STRATEGY</h4>
-          <p>Based on the consultation, we create a customized treatment plan tailored to your specific needs. This includes personalized therapies, dietary recommendations, and lifestyle changes to restore balance and well-being.</p>
+          <p>Career strategy services assist individuals in making informed career decisions, enhancing job satisfaction, and achieving professional growth.
+          </p>
           <hr>
         </div>
       </div>
@@ -285,7 +281,8 @@
         </div>
         <div class="hcr pt-2">
           <h4 class="font-sans text-2xl">RELATIONSHIP COUNSELLING</h4>
-          <p>Our carefully administered therapy sessions follow the Ayurvedic principles of healing. Whether it’s detoxification, massage, or herbal treatments, each session is designed to promote rejuvenation, alleviate discomfort, and restore harmony to your body and mind.</p>
+          <p>Relationship counselling addresses issues within personal relationships, aiming to improve communication and resolve conflicts between partners or family members.
+          </p>
           <hr>
         </div>
       </div>
@@ -296,7 +293,8 @@
         </div>
         <div class="hcr pt-2">
           <h4 class="font-sans text-2xl">PERSONAL GROWTH</h4>
-          <p>Our carefully administered therapy sessions follow the Ayurvedic principles of healing. Whether it’s detoxification, massage, or herbal treatments, each session is designed to promote rejuvenation, alleviate discomfort, and restore harmony to your body and mind.</p>
+          <p> Personal growth involves self-improvement in various aspects of life, aiming to enhance self-awareness, develop talents, and achieve personal goals.
+          </p>
           <hr>
         </div>
       </div>

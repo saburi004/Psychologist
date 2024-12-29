@@ -47,7 +47,7 @@
         position: absolute;
         top: 20px;
         left: 20px;
-        background-color: #004d00; /* Dark green */
+        background-color: #004d00; 
         color: white;
         padding: 10px 20px;
         border-radius: 50%;
@@ -63,10 +63,9 @@
       .banner {
         background-size: cover;
         background-position: center;
-        border-radius: 30px 280px 60px 30px;
         height: 300px;
         position: relative;
-        background-attachment: fixed; /* Parallax effect */
+        background-attachment: fixed; 
       }
 
       /* Card Styling */
@@ -82,7 +81,7 @@
         border-radius: 20px;
         overflow: hidden;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border: 5px solid #4caf50; /* Colored edges for the card */
+        border: 5px solid #4caf50; 
         transition: transform 0.3s ease;
       }
 
@@ -120,14 +119,15 @@
 
   <!-- Banner Section -->
   <section class="banner relative parallax">
-    <!-- Back Arrow -->
-    <a href="home.html" class="arrow-btn">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-      </svg>
-    </a>
+       <button class="absolute top-4 left-4 bg-white rounded-full shadow-lg p-2 z-20" onclick="window.location.href='/'">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 text-black">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+    </button>
+    
+  
     <div class="absolute inset-0 flex items-center justify-center">
-      <h1 class="text-black text-5xl font-bold">About Us</h1>
+      <h1 class="text-white text-5xl font-bold" style="font-family: 'Times New Roman', Times, serif">Blogs</h1>
     </div>
   </section>
 
