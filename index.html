@@ -33,12 +33,26 @@
     height: 100%;
   }
   
-
+  @media (max-width: 576px) {
+    .btn {
+      max-width: 90%; 
+      padding: 12px 20px;
+      font-size: 16px; 
+    }
+    /* .noparallax{
+      background-image: none !important;
+    }
+    .parallaxdoctor{
+      background: none !important;
+    } */
+  
+  }
   @media (max-width: 768px) {
     .bg-pattern {
       width: 100%; 
       clip-path: none; 
     }
+    
   }
    
     .bg-cream { background-color: #9cfff0; }
@@ -46,6 +60,14 @@
     .hover-card:hover { transform: scale(1.05); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); }
     
     .parallax {
+      background-image: url('/images/parallax.jpg');
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 500px;
+    }
+    .parallaxdoctor {
       background-image: url('/images/parallax.jpg');
       background-attachment: fixed;
       background-position: center;
@@ -187,8 +209,8 @@
     </div>
   </div>
   <a href="#hero">
-    <div class="arrow-circle" style="z-index: 20;">
-      <i class="fas fa-arrow-down"></i>
+    <div class="arrow-circle " style="z-index: 20;">
+      <i class="fas fa-arrow-down sm-mt-5"></i>
     </div>
   </a>
 </section>
@@ -217,8 +239,6 @@
         <div class="col-md-6 text-brown d-flex flex-column justify-content-center" id="hero">
           <h2 class="display-4" style="font-family: 'Times New Roman', Times, serif;">Transform Your Mind, Transform Your Life!</h2>
           <p class="lead pt-4">Your potential is limitless, waiting to be released. I’m here to help you break through barriers, discover your true self, and create a life filled with purpose and growth.</p>
-          <!-- <a href="#contact" class="btn btn-success rounded-pill mt-3" style="background-color: rgb(24, 61, 24);">Make Appointment</a> -->
-          <!-- Small Image with Slide Right Animation -->
           <div class="mt-4" >
             <img src="images/Heroimg2.jpeg" 
                  alt="Additional Image" class="img-fluid rounded slide-right"
@@ -228,44 +248,40 @@
       </div>
     </div>
     <a href="#contact" class="btn btn-success rounded-pill mt-3" 
-    style="position: fixed; bottom: 20px; right: 20px; background-color: rgb(24, 61, 24); padding: 15px 25px; font-size: 18px; z-index: 1000;">
+    style="position: fixed; bottom: 20px; right: 20px; background-color: rgb(24, 61, 24); padding: 15px 25px; font-size: 18px; z-index: 1000; max-width: 250px; width: 100%; text-align: center;">
    Make Appointment
  </a>
   </div>
   
 <!-- about doctor -->
-  <section  class="py-16 bg-white relative overflow-hidden parallax">
-    <!-- Parallax Background -->
-    <div class="parallax absolute top-0 left-0 w-full h-full bg-cover bg-center" style="background-image: url('path/to/your/background-image.jpg');"></div>
-    
-    <div class="container mx-auto relative z-10 mb-12">
-      <div class="max-w-5xl mx-auto p-8 bg-[#ccfff2] rounded-lg shadow-lg flex flex-wrap items-center">
-        <!-- Left Image Section -->
-        <div class="flex-shrink-0 w-full md:w-1/2 mb-8 md:mb-0">
-          <img src="images\mam1.jpg" alt="Doctor Image" class="rounded-lg w-full h-80 object-cover">
-        </div>
-  
-        <!-- Right Description Section -->
-        <div class="w-full md:w-1/2 md:pl-8">
-          <h3 class="text-3xl font-semibold text-brown mb-4">PRIYANSHU SINGH</h3>
-          <p class="text-lg mb-4">
-            A psychologist and author, empowers individuals through personal growth, mental health support, and relationship guidance, inspiring them to heal and become their best selves. With a passion for meaningful change, she provides tools and insights to help people lead happier, more fulfilling lives.
-          </p>
-          <a href="/about.html">
-            <button class="btn btn-primary text-black bg-[#DBFBFF] hover:bg-[#58dbc8] px-6 py-2 rounded-lg transition duration-300 mt-4">
-              Learn More
-            </button>
-          </a>
-        </div>
+<section class="py-16 bg-white relative overflow-hidden parallax">
+  <!-- Parallax Background -->
+  <div class="parallax-background absolute top-0 left-0 w-full h-full bg-cover bg-center" style="background-image: url('path/to/your/background-image.jpg');"></div>
+
+  <div class="container mx-auto relative z-10 mb-12">
+    <div class="max-w-5xl mx-auto p-8 bg-[#ccfff2] rounded-lg shadow-lg flex flex-wrap items-center">
+      <!-- Left Image Section -->
+      <div class="flex-shrink-0 w-full md:w-1/2 mb-8 md:mb-0">
+        <img src="images/mam1.jpg" alt="Doctor Image" class="rounded-lg w-full h-80 object-cover">
+      </div>
+
+      <!-- Right Description Section -->
+      <div class="w-full md:w-1/2 md:pl-8">
+        <a href="/about.html"><h3 class="text-3xl font-semibold text-brown mb-4">PRIYANSHU SINGH</h3></a>
+        <p class="text-lg mb-4">
+          A psychologist and author, empowers individuals through personal growth, mental health support, and relationship guidance, inspiring them to heal and become their best selves. With a passion for meaningful change, she provides tools and insights to help people lead happier, more fulfilling lives.
+        </p>
+        <a href="/about.html">
+          <button class="btn btn-primary text-black bg-[#DBFBFF] hover:bg-[#58dbc8] px-6 py-2 rounded-lg transition duration-300 mt-4">
+            Learn More
+          </button>
+        </a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-
-
-  <!-- services -->
- 
-  
+<!-- services section -->
 <div class="section4 bg-[#F5F1E3] w-full py-20" style="background-color: #ecfdff;">
   <div class="container mx-auto flex flex-col lg:flex-row items-center">
     <div class="workleft lg:w-1/2 lg:pl-24">
@@ -322,9 +338,7 @@
     </div>
 
     <div class="workright lg:w-1/2 relative">
-      <!-- <img src="https://i.pinimg.com/originals/d6/4c/44/d64c44f52d4584aa58c5f1dfb6b5dfd1.gif" alt="Description of Image" class="w-full h-full object-cover rounded-[20px_200px_20px_20px] ml-10 fade-in" id="fade-in-image" style="height: 100%; width: 100%; border-radius: 20px 200px 20px 20px;"> -->
       <img src="images/services.jpg" alt="Description of Image" class="w-full h-full object-cover rounded-[20px_200px_20px_20px] ml-10 fade-in" id="fade-in-image" style="height: 100%; width: 90%; border-radius: 20px 200px 20px 20px;">
-
     </div>
   </div>
 </div>
@@ -353,6 +367,7 @@
         transform: translateX(0);
     } 
 </style>
+
 
   <!-- Parallax Section -->
   <section class="parallax flex items-center justify-center text-center text-white">
@@ -538,28 +553,68 @@
   <section id="choose" class="py-16 bg-white parallax">
     <div class="container mx-auto text-center">
       <h2 class="text-4xl font-bold text-white mb-12 font-times-new-roman font-size-80">Why Choose Us</h2>
-      <div class="row">
-         <div class="col-md-4 mb-4">
-        <div class="bg-white p-6 rounded-lg shadow-lg">
-          <h3 class="text-2xl font-semibold mb-3">1:1 Session</h3>
-          <p class="text-lg">Dedicated, personalized guidance tailored to your needs, ensuring focused attention and meaningful progress.</p>
+  
+      <!-- Carousel for Mobile View -->
+      <div id="chooseCarousel" class="carousel slide d-block d-md-none" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <!-- Carousel item 1 -->
+          <div class="carousel-item active">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+              <h3 class="text-2xl font-semibold mb-3">1:1 Session</h3>
+              <p class="text-lg">Dedicated, personalized guidance tailored to your needs, ensuring focused attention and meaningful progress.</p>
+            </div>
+          </div>
+          <!-- Carousel item 2 -->
+          <div class="carousel-item">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+              <h3 class="text-2xl font-semibold mb-3">Guaranteed Results</h3>
+              <p class="text-lg">Ensuring measurable progress and meaningful outcomes, experience tailored support designed to address your specific goals.</p>
+            </div>
+          </div>
+          <!-- Carousel item 3 -->
+          <div class="carousel-item">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+              <h3 class="text-2xl font-semibold mb-3">Active Listening & Understanding</h3>
+              <p class="text-lg">Personalized support where your thoughts and feelings are heard with empathy, ensuring deeper understanding and effective guidance.</p>
+            </div>
+          </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#chooseCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#chooseCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-      <div class="col-md-4 mb-4">
-        <div class="bg-white p-6 rounded-lg shadow-lg">
-          <h3 class="text-2xl font-semibold mb-3">Guaranteed Results</h3>
-          <p class="text-lg">Ensuring measurable progress and meaningful outcomes, experience tailored support designed to address your specific goals.</p>
+  
+      <!-- Regular Grid for Larger Screens -->
+      <div class="row d-none d-md-flex">
+        <div class="col-md-4 mb-4">
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h3 class="text-2xl font-semibold mb-3">1:1 Session</h3>
+            <p class="text-lg">Dedicated, personalized guidance tailored to your needs, ensuring focused attention and meaningful progress.</p>
+          </div>
         </div>
-      </div>
-      <div class="col-md-4 mb-4">
-        <div class="bg-white p-6 rounded-lg shadow-lg">
-          <h3 class="text-2xl font-semibold mb-3">Active Listening & Understanding</h3>
-          <p class="text-lg">Personalized support where your thoughts and feelings are heard with empathy, ensuring deeper understanding and effective guidance.</p>
+        <div class="col-md-4 mb-4">
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h3 class="text-2xl font-semibold mb-3">Guaranteed Results</h3>
+            <p class="text-lg">Ensuring measurable progress and meaningful outcomes, experience tailored support designed to address your specific goals.</p>
+          </div>
         </div>
-      </div>
+        <div class="col-md-4 mb-4">
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h3 class="text-2xl font-semibold mb-3">Active Listening & Understanding</h3>
+            <p class="text-lg">Personalized support where your thoughts and feelings are heard with empathy, ensuring deeper understanding and effective guidance.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
+  <!-- Bootstrap 5 Carousel and JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  
   
 
 <!-- Appointment Section -->
