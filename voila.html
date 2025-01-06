@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Psychologist Website</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.3/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.3/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+  
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+
+
+.bg-pattern {
+    background-image: url('path-to-your-image.jpg'); 
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%; 
+    height: 100%;
+  }
+  
+
+  @media (max-width: 768px) {
+    .bg-pattern {
+      width: 100%; 
+      clip-path: none; 
+    }
+  }
+   
+    .bg-cream { background-color: #9cfff0; }
+    .text-brown { color: #371800; }
+    .hover-card:hover { transform: scale(1.05); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); }
+    
+    .parallax {
+      background-image: url('/images/parallax.jpg');
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 500px;
+    }
+
+    @keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.arrow-circle {
+  position: absolute;
+  bottom: 20px; 
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: float 2s infinite ease-in-out;
+}
+.float{
+  animation: float 2s infinite ease-in-out;
+
+}
+.arrow-circle i {
+  font-size: 24px;
+  color: #333;
+}
+
+/* Animation for floating effect */
+@keyframes float {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-20px); /
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* Slide-in from the right */
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* animations to the images */
+.slide-left {
+  animation: slideInLeft 3s ease-out;
+}
+
+.slide-right {
+  animation: slideInRight 3s ease-out;
+}
+  </style>
+</head>
+<!-- <body class="bg-cream text-brown"> -->
+
+  <!-- Navbar -->
+  <nav class="bg-[#02ad8c]  w-full z-50 shadow-lg">
+    <div class="container mx-auto flex items-center justify-between px-4 py-3">
+      <a href="#" class="text-[rgb(35,62,35)] text-2xl font-bold">
+        Psychologist Singh
+      </a>
+  
+      <!-- Toggle Button -->
+      <button class="lg:hidden text-[rgb(35,62,35)] p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[rgb(163,205,183)]" id="navbar-toggle">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+  
+      <div class="hidden lg:flex lg:items-center lg:space-x-6" id="navbar-menu">
+        <a href="/" class="text-[rgb(7,32,7)] hover:text-[#c2ffff]  px-4 py-2">Home</a>
+        <a href="/about.html" class="text-[rgb(7,32,7)] hover:text-[#c2ffff] px-4 py-2">About</a>
+        <a href="/blogs.html" class="text-[rgb(7,32,7)] hover:text-[#c2ffff]  px-4 py-2">Blog</a>
+        <a href="/services.html" class="text-[rgb(7,32,7)] hover:text-[#c2ffff]  px-4 py-2">Services</a>
+        <a href="#contact" class="text-[rgb(7,32,7)] hover:text-[#c2ffff] px-4 py-2">Contact Us</a>
+      
+      </div>
+    </div>
+  </nav>
+  
+  <script>
+    document.getElementById("navbar-toggle").addEventListener("click", function () {
+      const menu = document.getElementById("navbar-menu");
+      menu.classList.toggle("hidden");
+    });
+  </script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+<!-- Banner 1 (Visible on larger screens like laptops) -->
+<section class="relative w-full h-96 bg-cover bg-center hidden md:block">
+  <img class="w-full h-full" src="images/Banner.png"/>
+  <a href="#hero">
+    <div class="arrow-circle" style="z-index: 20;">
+      <i class="fas fa-arrow-down"></i>
+    </div>
+  </a>
+</section>
+
+<!-- Banner 2 (Visible on mobile devices and responsive) -->
+<section class="relative w-full h-96 bg-cover bg-center parallax md:hidden">
+  <div class="absolute inset-0 bg-[#021a14] opacity-30"></div>
+  <div class="relative z-10 flex flex-col items-center justify-center w-full h-full px-4 md:px-12">
+    <!-- Image section for mobile -->
+    <div class="w-64 h-64 flex justify-center items-center mb-4 overflow-hidden rounded-full">
+      <img src="images/mam3.jpg" alt="Psychologist" class="w-full h-full object-cover border-4 border-light-green-400 shadow-lg shadow-green-300">
+    </div>
+    
+    <!-- Text section for mobile -->
+    <div class="w-full flex flex-col justify-center items-center text-center">
+      <h1 class="text-3xl md:text-5xl font-semibold text-white mb-4">Welcome to Psychologist Singh</h1>
+      <p href="#contact" class="bg-brown text-white px-6 md:px-8 rounded-full text-lg">
+        <!-- Your content here -->
+      </p>
+    </div>
+  </div>
+  <a href="#hero">
+    <div class="arrow-circle" style="z-index: 20;">
+      <i class="fas fa-arrow-down"></i>
+    </div>
+  </a>
+</section>
+
+
+
+
+<!-- Below Banner Section -->
+<div class="section1 py-5" style="background-color: #dbfbff; position: relative;" >
+    <div class="container" style="background-image: url(images/Herobackground.jpg); 
+                                 border-radius: 20px 200px 30px 30px !important; padding: 50px; margin-top: 60px; position: relative;">
+      
+      <!-- Glass Effect Overlay -->
+      <div class="glass-effect" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; 
+                                       background: rgba(255, 255, 255, 0.3); backdrop-filter: blur(10px); 
+                                       border-radius: 20px 200px 30px 30px !important;"></div>
+      
+      <div class="row align-items-stretch">
+        <!-- Left Image Section with Slide Left Animation -->
+        <div class="col-md-6 d-flex justify-content-center ">
+          <img src="images/Heroimg1.jpeg" 
+               alt="Ayurveda Image" class="img-fluid rounded slide-left h-100"
+               style="border-radius: 20px 200px 30px 30px !important; object-fit: cover; max-width: 100%;" />
+        </div>
+        <!-- Right Content Section -->
+        <div class="col-md-6 text-brown d-flex flex-column justify-content-center" id="hero">
+          <h2 class="display-4" style="font-family: 'Times New Roman', Times, serif;">Transform Your Mind, Transform Your Life!</h2>
+          <p class="lead pt-4">Your potential is limitless, waiting to be released. I’m here to help you break through barriers, discover your true self, and create a life filled with purpose and growth.</p>
+          <!-- <a href="#contact" class="btn btn-success rounded-pill mt-3" style="background-color: rgb(24, 61, 24);">Make Appointment</a> -->
+          <!-- Small Image with Slide Right Animation -->
+          <div class="mt-4" >
+            <img src="images/Heroimg2.jpeg" 
+                 alt="Additional Image" class="img-fluid rounded slide-right"
+                 style="border-radius: 20px 100px 30px 30px !important; object-fit: cover;width: 800px; ; height: 400px;" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#contact" class="btn btn-success rounded-pill mt-3" 
+    style="position: fixed; bottom: 20px; right: 20px; background-color: rgb(24, 61, 24); padding: 15px 25px; font-size: 18px; z-index: 1000;">
+   Make Appointment
+ </a>
+  </div>
+  
+<!-- about doctor -->
+  <section  class="py-16 bg-white relative overflow-hidden parallax">
+    <!-- Parallax Background -->
+    <div class="parallax absolute top-0 left-0 w-full h-full bg-cover bg-center" style="background-image: url('path/to/your/background-image.jpg');"></div>
+    
+    <div class="container mx-auto relative z-10 mb-12">
+      <div class="max-w-5xl mx-auto p-8 bg-[#ccfff2] rounded-lg shadow-lg flex flex-wrap items-center">
+        <!-- Left Image Section -->
+        <div class="flex-shrink-0 w-full md:w-1/2 mb-8 md:mb-0">
+          <img src="images\mam1.jpg" alt="Doctor Image" class="rounded-lg w-full h-80 object-cover">
+        </div>
+  
+        <!-- Right Description Section -->
+        <div class="w-full md:w-1/2 md:pl-8">
+          <h3 class="text-3xl font-semibold text-brown mb-4">PRIYANSHU SINGH</h3>
+          <p class="text-lg mb-4">
+            A psychologist and author, empowers individuals through personal growth, mental health support, and relationship guidance, inspiring them to heal and become their best selves. With a passion for meaningful change, she provides tools and insights to help people lead happier, more fulfilling lives.
+          </p>
+          <a href="/about.html">
+            <button class="btn btn-primary text-black bg-[#DBFBFF] hover:bg-[#58dbc8] px-6 py-2 rounded-lg transition duration-300 mt-4">
+              Learn More
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- services -->
+ 
+  
+<div class="section4 bg-[#F5F1E3] w-full py-20" style="background-color: #ecfdff;">
+  <div class="container mx-auto flex flex-col lg:flex-row items-center">
+    <div class="workleft lg:w-1/2 lg:pl-24">
+     <a href="/services.html"> <button class="font-serif text-3xl font-medium ">Explore More&nbsp;&nbsp;<i class="fas fa-arrow-right"></i></button></a>
+      <h4 class="font-serif text-5xl pb-8 mt-5">Have a look on how we can help you</h4>
+
+      <div class="hiwcon1 flex pb-5">
+        <div class="hcl">
+          <h1 class="text-5xl pr-10 font-serif text-[#244424] pt-5">01</h1>
+        </div>
+        <div class="hcr pt-2">
+          <h4 class="font-sans text-2xl">CHILD/PARENT COUNSELLING</h4>
+          <p>Child/parent counselling focuses on improving family dynamics, addressing behavioral issues, and enhancing communication between parents and children.
+          </p>
+          <hr>
+        </div>
+      </div>
+
+      <div class="hiwcon1 flex pb-5">
+        <div class="hcl">
+          <h1 class="text-5xl pr-10 font-serif text-[#244424] pt-5">02</h1>
+        </div>
+        <div class="hcr pt-2">
+          <h4 class="font-sans text-2xl">CAREER STRATEGY</h4>
+          <p>Career strategy services assist individuals in making informed career decisions, enhancing job satisfaction, and achieving professional growth.
+          </p>
+          <hr>
+        </div>
+      </div>
+
+      <div class="hiwcon1 flex pb-5">
+        <div class="hcl">
+          <h1 class="text-5xl pr-10 font-serif text-[#244424] pt-5">03</h1>
+        </div>
+        <div class="hcr pt-2">
+          <h4 class="font-sans text-2xl">RELATIONSHIP COUNSELLING</h4>
+          <p>Relationship counselling addresses issues within personal relationships, aiming to improve communication and resolve conflicts between partners or family members.
+          </p>
+          <hr>
+        </div>
+      </div>
+
+      <div class="hiwcon1 flex pb-5">
+        <div class="hcl">
+          <h1 class="text-5xl pr-10 font-serif text-[#244424] pt-5">04</h1>
+        </div>
+        <div class="hcr pt-2">
+          <h4 class="font-sans text-2xl">PERSONAL GROWTH</h4>
+          <p> Personal growth involves self-improvement in various aspects of life, aiming to enhance self-awareness, develop talents, and achieve personal goals.
+          </p>
+          <hr>
+        </div>
+      </div>
+    </div>
+
+    <div class="workright lg:w-1/2 relative">
+      <!-- <img src="https://i.pinimg.com/originals/d6/4c/44/d64c44f52d4584aa58c5f1dfb6b5dfd1.gif" alt="Description of Image" class="w-full h-full object-cover rounded-[20px_200px_20px_20px] ml-10 fade-in" id="fade-in-image" style="height: 100%; width: 100%; border-radius: 20px 200px 20px 20px;"> -->
+      <img src="images/services.jpg" alt="Description of Image" class="w-full h-full object-cover rounded-[20px_200px_20px_20px] ml-10 fade-in" id="fade-in-image" style="height: 100%; width: 90%; border-radius: 20px 200px 20px 20px;">
+
+    </div>
+  </div>
+</div>
+
+<script>
+    window.addEventListener('scroll', function() {
+        const workrightImg = document.querySelector('#fade-in-image');
+        const rect = workrightImg.getBoundingClientRect();
+        
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+            workrightImg.classList.add('fade-in-visible');
+        }
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+<style>
+    .fade-in {
+        opacity: 0;
+        transform: translateX(100px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+    .fade-in-visible {
+        opacity: 1;
+        transform: translateX(0);
+    } 
+</style>
+
+  <!-- Parallax Section -->
+  <section class="parallax flex items-center justify-center text-center text-white">
+    <div class="bg-black bg-opacity-50 p-8 rounded-lg">
+      <h2 class="text-4xl font-bold mb-4 font-times-new-roman font-size-80">Get to know us and our work</h2>
+      <p class="text-lg">Experience transformative changes through professional psychological support.</p><br>
+      <a href="/blogs.html" class="text-lg" style="text-decoration: underline;"><button style="z-index: 1;">Checkout our Blogs</button></a>
+
+    </div>
+  </section>
+
+<!-- Testimonial -->
+
+<div class="section6 bg-white  "  >
+  <div class="container p-8" style="background-color: #ECFDFF ;">
+      <div class="row">
+          <div class="col-lg-6 col-md-12 d-flex justify-content-center align-items-center mb-4 mb-md-0">
+              <div class="testleft overflow-hidden position-relative">
+                  <img src="images/testimonial.gif" alt="Description of Image" class="img-fluid rounded" style="transform: translateX(-100%); transition: transform 0.8s ease-out; object-fit: cover;height: 700px; width: 600px; border-radius: 20px 200px 20px 20px !important; ">
+              </div>
+          </div>
+
+          <div class="col-lg-6 col-md-12 text-dark d-flex flex-column align-items-start p-4" >
+              <h1 class="font-times-new-roman font-size-20">TESTIMONIAL</h1>
+              <h2 class="font-times-new-roman font-size-75">What Our Clients Say</h2>
+              <p class="font-size-16">Discover the transformative experiences of individuals who have embarked on their journey to mental well-being with us. Our clients' stories reflect the care, understanding, and support they received through our personalized therapy sessions. Let their words inspire you to take the first step toward a healthier, happier mind</p>
+
+              <div class="tescont border-radius-20 py-3">
+                  <div id="cardCarousel2" class="carousel slide" data-ride="carousel">
+                      <div class="carousel-inner">
+                          <!-- First Card -->
+                          <div class="carousel-item active">
+                              <div class="card" style="height:300px;padding:30px;border-radius:10px 70px 10px 10px;">
+                                  <div class="card-body">
+                                      <h5 class="card-title"><strong>Mansi Gupta</strong></h5>
+                                      <p class="card-text">
+                                          <span style="color: gold;">★★★★★</span> <br>
+                                          "Priyanshu is an excellent counsellor. She effortlessly guides and helps the students in choosing the right streams and careers based on their ability and interests. What is awesome is that she also provides various remedies to overcome weaknesses! I would highly recommend her to one and all!"
+                                      </p>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- Second Card -->
+                          <div class="carousel-item">
+                              <div class="card" style="height:300px;padding:30px;border-radius:10px 70px 10px 10px;">
+                                  <div class="card-body">
+                                      <h5 class="card-title"><strong>Swastika Pandey</strong></h5>
+                                      <p class="card-text">
+                                          <span style="color: gold;">★★★★☆</span>  <br>
+                                          "My experience has been incredible so far. I got the DMIT test done and got to know more about myself and my strengths. I hope I can utilise these wonderful insights to the best of my abilities. Ma'am is incredible and very energetic. She listens to you very carefully without judging. If you are troubled in your life in any sort of way, definitely visit ma'am asap. The feeling of negativity spreads like an infection making you hollow as a person. Feigning ignorance and delay only makes the healing slower. However, it's never too late as beautifully written by Elton John."
+                                      </p>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- Third Card -->
+                          <div class="carousel-item">
+                              <div class="card" style="height:300px;padding:30px;border-radius:10px 70px 10px 10px;">
+                                  <div class="card-body">
+                                      <h5 class="card-title"><strong>Akash Pratap Singh</strong></h5>
+                                      <p class="card-text">
+                                          <span style="color: gold;">★★★★★</span>  <br>
+                                          "When I met Priyanshu, I struggled with a lot of negative thoughts. Thanks to her counseling and support, I was able to reduce these thoughts and focus on my goals. She is also helping me prepare for my government job and working on my confidence, so I can continue to develop my personality and stay on top in the future. Always grateful, mam! Thank U so much🙏🙏"
+                                      </p>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- Fourth Card -->
+                          <div class="carousel-item">
+                              <div class="card" style="height:300px;padding:30px;border-radius:10px 70px 10px 10px;">
+                                  <div class="card-body">
+                                      <h5 class="card-title"><strong>Nutan Singh</strong></h5>
+                                      <p class="card-text">
+                                          <span style="color: gold;">★★★★★</span>  <br>
+                                          "Madam Priyanshu is a competent, passionate, empathetic and active listener. I was looking for a counsellor to enquire about the key competencies of my daughter so that we could work on those. She guided us regarding that quite patiently, cleared all our doubts and explained everything thoroughly. She also helped us in understanding the needs of the growing kids more deeply and how to cope with the mental and emotional changes of the children. I highly recommend her."
+                                      </p>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- Fifth Card -->
+                          <div class="carousel-item">
+                              <div class="card" style="height:300px;padding:30px;border-radius:10px 70px 10px 10px;">
+                                  <div class="card-body">
+                                      <h5 class="card-title"><strong>Jahnvi Thakur</strong></h5>
+                                      <p class="card-text">
+                                          <span style="color: gold;">★★★★☆</span>  <br>
+                                          "The talk was very informative. I've got to know very new things by which we can maintain and improve our lifestyle and mental health...and I am going to apply many things that ma'am told us in real life...the talk was really helpful and I am grateful that I got an opportunity to attend the talk."
+                                      </p>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- Sixth Card -->
+                          <div class="carousel-item">
+                              <div class="card" style="height:300px;padding:30px;border-radius:10px 70px 10px 10px;">
+                                  <div class="card-body">
+                                      <h5 class="card-title"><strong>Sandeep Singh</strong></h5>
+                                      <p class="card-text">
+                                          <span style="color: gold;">★★★★★</span>  <br>
+                                          "This is the first time I'm taking a counselling session. At the start I was so scared but after the first session, I felt so relaxed and calm, thank you for all the support 🙏. Whenever I had any type of breakdown or stuck, I always pinged/called Priyanshu Ma'am, and she always helped me during that time and made me feel relaxed, calm and stable. I'm happy that I'm taking sessions from a counselor which is always there to support me whenever I need it. Thank you, Priyanshu Ma'am."
+                                      </p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- Carousel Controls -->
+                      <a class="carousel-control-prev" href="#cardCarousel2" role="button" data-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="carousel-control-next" href="#cardCarousel2" role="button" data-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+  function checkVisibility() {
+      const testleftImg = document.querySelector('.testleft img');
+      const section = document.querySelector('.section6');
+      const rect = section.getBoundingClientRect();
+
+      if (rect.top < window.innerHeight && rect.bottom >= 0) {
+          testleftImg.style.transform = 'translateX(0)';
+      } else {
+          testleftImg.style.transform = 'translateX(-100%)';
+      }
+  }
+
+  window.addEventListener('scroll', checkVisibility);
+  window.addEventListener('load', checkVisibility); 
+</script>
+
+<style>
+  .font-times-new-roman {
+      font-family: 'Times New Roman', Times, serif;
+  }
+  .font-size-20 {
+      font-size: 20px;
+  }
+  .font-size-75 {
+      font-size: 75px;
+  }
+  .font-size-16 {
+      font-size: 16px;
+  }
+  .border-radius-20 {
+      border-radius: 20px 100px 20px 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .section6 {
+      padding: 50px 20px;
+    }
+    .testleft, .testright {
+      padding: 0;
+      margin: 0;
+    }
+    .testleft img {
+      width: 100%;
+      height: auto;
+      border-radius: 20px 200px 20px 20px;
+    }
+    .testright {
+      padding-left: 0;
+      padding-top: 20px;
+    }
+  }
+</style>
+
+
+  
+
+  <!-- Why Choose Us Section -->
+
+  <section id="choose" class="py-16 bg-white parallax">
+    <div class="container mx-auto text-center">
+      <h2 class="text-4xl font-bold text-white mb-12 font-times-new-roman font-size-80">Why Choose Us</h2>
+      <div class="row">
+         <div class="col-md-4 mb-4">
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-2xl font-semibold mb-3">1:1 Session</h3>
+          <p class="text-lg">Dedicated, personalized guidance tailored to your needs, ensuring focused attention and meaningful progress.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-2xl font-semibold mb-3">Guaranteed Results</h3>
+          <p class="text-lg">Ensuring measurable progress and meaningful outcomes, experience tailored support designed to address your specific goals.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-2xl font-semibold mb-3">Active Listening & Understanding</h3>
+          <p class="text-lg">Personalized support where your thoughts and feelings are heard with empathy, ensuring deeper understanding and effective guidance.</p>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+  
+
+<!-- Appointment Section -->
+<section id="contact" class="py-16 bg-[#ECFDFF] relative overflow-hidden ">
+  <div class="container mx-auto text-center relative">
+    <div class="row">
+      <!-- Left Image Section -->
+      <div class="col-md-6 p-0">
+        <img src="images/contact.png" alt="Appointment Image" class="w-full object-cover" style="height:full; border-radius: 20px 0 0 20px;">
+      </div>
+
+      <!-- Right Content Section (Form) -->
+      <div class="col-md-6 p-8 rounded-lg" style="background-color: 
+      #002619
+      ;">
+        <h2 class="text-4xl font-bold mb-12 text-center text-white mt-5 font-times-new-roman font-size-80">Book an Appointment</h2>
+        <form>
+          <div class="form-group mb-4 flex items-center">
+            <input type="text" id="name" class="form-control w-full" placeholder="Enter your name" required>
+          </div>
+          <div class="form-group mb-4 flex items-center">
+            <input type="email" id="email" class="form-control w-full" placeholder="Enter your email" required>
+          </div>
+          <div class="text-center">
+            <button class="px-6 py-2 text-white font-bold rounded-full" style="background-color: #008575; border: 2px solid #f5f5dc; width: 300px;">
+              Contact
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Footer -->
+<div class="container my-5  bg-[#ECFDFF]">
+
+  <footer style="background-color: #d4fff2;">
+  <div class="container p-4">
+    <div class="row">
+      <div class="col-lg-6 col-md-12 mb-4">
+        <h5 class="mb-3" style="letter-spacing: 2px; color: #bbffef;">footer content</h5>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+          molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam
+          voluptatem veniam, est atque cumque eum delectus sint!
+        </p>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5 class="mb-3" style="letter-spacing: 2px; color: #013d2b;">Contact us</h5>
+        <ul class="list-unstyled mb-0">
+          <li class="mb-1">
+            <a href="#!" style="color: #4f4f4f;"> +91 6367416926
+            </a>
+          </li>
+          <li class="mb-1">
+            <a href="#!" style="color: #4f4f4f;">team@psychologistsingh.com</a>
+          </li>
+          <li class="mb-1">
+            <a href="#!" style="color: #4f4f4f;">Pricing</a>
+          </li>
+          <li>
+            <a href="#!" style="color: #4f4f4f;">Where we deliver?</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5 class="mb-1" style="letter-spacing: 2px; color: #818963;">opening hours</h5>
+        <table class="table" style="color: #abffe3; border-color: #666;">
+          <tbody>
+            <tr>
+              <td>Mon - Fri:</td>
+              <td>8am - 9pm</td>
+            </tr>
+            <tr>
+              <td>Sat - Sun:</td>
+              <td>8am - 1am</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="text-center p-3" style="background-color: rgba(0, 47, 29, 0.952);color: #bbffef;">
+    © 2025 Copyright  </div>
+  <!-- Copyright -->
+</footer>
+
+</div>
+    
+  
+
+  <!-- Bootstrap JS and dependencies -->
+   
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+    let currentIndex = 0;
+    const cards = $(".review-card");
+    const totalCards = cards.length;
+    
+    cards.hide();
+    cards.eq(currentIndex).show();
+    
+    $("#next").click(function() {
+      currentIndex = (currentIndex + 1) % totalCards;
+      cards.hide();
+      cards.eq(currentIndex).show();
+    });
+    
+    $("#prev").click(function() {
+      currentIndex = (currentIndex - 1 + totalCards) % totalCards;
+      cards.hide();
+      cards.eq(currentIndex).show();
+    });
+  });
+</script>
+</body>
+</html>
